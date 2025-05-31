@@ -8,11 +8,14 @@
 
 using namespace std;
 
-static DylanCoolStruct MyStruct; 
+DylanCoolStruct MyStruct;
 
 int main() {
-    cout << NeedsDefinition(5) << endl;
-
-
+    MyStruct.INT1 = 5;
+    MyStruct.FLO1 = 7.1;
+    print(NeedsDefinition(MyStruct.INT1));
+    print(NeedsDefinition(-5));
+    print(MyStruct.FLO1);
+    print(MyCoolInlineFunction(5, 8));
     return 0;
 }
